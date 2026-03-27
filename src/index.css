@@ -348,3 +348,9 @@ section p {
     text-align: center;
   }
 }
+
+@media (orientation: landscape) {
+  #hero {
+    min-height: 100dvh;
+  }
+}
