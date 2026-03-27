@@ -304,6 +304,10 @@ section p {
     align-items: center;
   }
 
+ html {
+    scroll-snap-type: none;
+  }
+
   .project-card {
     width: 90%;
     margin: 20px 0;
