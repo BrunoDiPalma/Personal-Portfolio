@@ -1,6 +1,6 @@
 import reactImg from "../assets/react-img.png";
 import NodeImg from "../assets/node-img.png";
-import postgreImg from "../assets/postgre-img.png";
+import sqlImg from "../assets/mysql-img.png";
 import jsImg from "../assets/javascript-img.png";
 import gitImg from "../assets/github-img.png";
 
@@ -12,7 +12,7 @@ function About() {
       <p className="about-text">
         Estudante de Análise e Desenvolvimento de Sistemas com foco em
         desenvolvimento web. Experiência prática em projetos utilizando
-        JavaScript, React, Node.js e PostgreSQL para construção de aplicações
+        JavaScript, React, Node.js e MySQL para construção de aplicações
         full stack e APIs REST.
       </p>
 
@@ -34,8 +34,8 @@ function About() {
 
         <div className="bottom-row">
           <div className="stack-card">
-            <img src={postgreImg} alt="PostgreSQL" />
-            <h3>PostgreSQL</h3>
+            <img src={sqlImg} alt="MySQL" />
+            <h3>MySQL</h3>
           </div>
 
           <div className="stack-card">
