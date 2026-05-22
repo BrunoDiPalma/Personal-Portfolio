@@ -1,5 +1,6 @@
 import userSystemImg from "../assets/user-management-system.png";
 import filmtrackImg from "../assets/filmtrack.png";
+import authsystemIgm from "../assets/auth-system.png"
 
 function Projects() {
   return (
@@ -7,6 +8,22 @@ function Projects() {
       <h1>Projetos</h1>
 
       <div className="projects-container">
+        <div className="project-card">
+          <h3>Auth System API</h3>
+          <p>
+            Plataforma fullstack de autenticação e gerenciamento de usuários com
+            sistema de login seguro via JWT e controle de acesso a rotas
+            protegidas. Backend com API REST e integração com banco de dados (em andamento).
+          </p>
+          <a
+            href="https://github.com/BrunoDiPalma/auth-system-api"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span>Ver Projeto</span>
+            <img src={authsystemIgm} alt="User Management System" />
+          </a>
+        </div>
         <div className="project-card">
           <h3>User Management</h3>
           <p>
@@ -29,8 +46,8 @@ function Projects() {
           <h3>Filmtrack</h3>
           <p>
             Plataforma fullstack para busca de filmes com integração a API REST
-            e gerenciamento de lista personalizada (watchlist). Frontend hospedado na Vercel
-            e backend com banco de dados no Railway.
+            e gerenciamento de lista personalizada (watchlist). Frontend
+            hospedado na Vercel e backend com banco de dados no Railway.
           </p>
           <a
             href="http://filmtrack-alpha.vercel.app/"

@@ -136,16 +136,9 @@ section p {
 .stacks {
   display: grid;
   grid-template-columns: repeat(3, 120px);
-  justify-content: center;
   gap: 20px;
-  margin-top: 60px;
-}
-
-.bottom-row {
-  grid-column: span 3;
-  display: flex;
   justify-content: center;
-  gap: 40px;
+  margin-top: 60px;
 }
 
 .stack-card {
