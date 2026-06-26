@@ -1,62 +1,103 @@
+import { useState } from "react";
 import userSystemImg from "../assets/user-management-system.png";
 import filmtrackImg from "../assets/filmtrack.png";
-import authsystemIgm from "../assets/auth-system.png"
+import authSystemImg from "../assets/auth-system.png";
+
+const projects = [
+  {
+    id: 1,
+    titulo: "Auth System API",
+    descricao:
+      "Sistema full stack de autenticação com JWT e gerenciamento de tarefas, desenvolvido em React, Node.js, TypeScript e Prisma.",
+    tecnologias: ["React", "Node.js", "TypeScript", "Prisma", "JWT"],
+    image: authSystemImg,
+    deployUrl: "https://auth-system-api-one.vercel.app/",
+    githubUrl: "https://github.com/BrunoDiPalma/auth-system-api",
+  },
+  {
+    id: 2,
+    titulo: "Filmtrack",
+    descricao:
+      "Plataforma full stack para busca de filmes e gerenciamento de watchlists utilizando React, Node.js e MySQL.",
+    tecnologias: ["React", "Node.js", "MySQL", "API REST"],
+    image: filmtrackImg,
+    deployUrl: "http://filmtrack-alpha.vercel.app/",
+    githubUrl: "https://github.com/BrunoDiPalma/auth-system-api",
+  },
+  {
+    id: 3,
+    titulo: "User Management",
+    descricao:
+      "Sistema CRUD de usuários com autenticação JWT e operações completas de gerenciamento.",
+    tecnologias: ["React", "Node.js", "JWT", "MySQL"],
+    image: userSystemImg,
+    deployUrl: null,
+    githubUrl: "https://github.com/BrunoDiPalma/user-management-system",
+  },
+];
 
 function Projects() {
+  const [selectedProject, setSelectedProject] = useState(projects[0]);
+
+  const isSelectedProject = (projectId) => selectedProject.id === projectId;
+  const getLinkClassName = (url) => (!url ? "disabled" : "");
+
   return (
     <section id="projects">
       <h1>Projetos</h1>
 
-      <div className="projects-container">
-        <div className="project-card">
-          <h3>Auth System API</h3>
-          <p>
-            Plataforma fullstack de autenticação e gerenciamento de usuários com
-            sistema de login seguro via JWT e controle de acesso a rotas
-            protegidas. Backend com API REST e integração com banco de dados (em andamento).
-          </p>
-          <a
-            href="https://github.com/BrunoDiPalma/auth-system-api"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <span>Ver Projeto</span>
-            <img src={authsystemIgm} alt="User Management System" />
-          </a>
-        </div>
-        <div className="project-card">
-          <h3>User Management</h3>
-          <p>
-            Sistema completo de gerenciamento de usuários (CRUD) com
-            autenticação segura. Permite cadastro, edição e exclusão de usuários
-            integrado a banco de dados. Tecnologias: Node.js, Express, MySQL,
-            React, JWT e bcrypt.
-          </p>
-          <a
-            href="https://github.com/BrunoDiPalma/user-management-system"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <span>Ver Projeto</span>
-            <img src={userSystemImg} alt="User Management System" />
-          </a>
-        </div>
+      <div className="projects-layout">
+        <aside className="projects-sidebar">
+          {projects.map((project) => (
+            <button
+              key={project.id}
+              type="button"
+              className={`project-selector ${
+                isSelectedProject(project.id) ? "active" : ""
+              }`}
+              onClick={() => setSelectedProject(project)}
+            >
+              {project.titulo}
+            </button>
+          ))}
+        </aside>
 
-        <div className="project-card">
-          <h3>Filmtrack</h3>
-          <p>
-            Plataforma fullstack para busca de filmes com integração a API REST
-            e gerenciamento de lista personalizada (watchlist). Frontend
-            hospedado na Vercel e backend com banco de dados no Railway.
-          </p>
-          <a
-            href="http://filmtrack-alpha.vercel.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <span>Ver Projeto</span>
-            <img src={filmtrackImg} alt="Filmtrack image" />
-          </a>
+        <div className="project-preview">
+          <h2>{selectedProject.titulo}</h2>
+          <p>{selectedProject.descricao}</p>
+
+          <div className="project-stack">
+            {selectedProject.tecnologias.map((tech) => (
+              <span key={tech}>{tech}</span>
+            ))}
+          </div>
+
+          <img
+            src={selectedProject.image}
+            alt={selectedProject.titulo}
+            className={`project-preview-image ${
+              isSelectedProject(1) ? "project-preview-image-small" : ""
+            }`}
+          />
+
+          <div className="project-links">
+            <a
+              href={selectedProject.deployUrl || "#"}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={getLinkClassName(selectedProject.deployUrl)}
+            >
+              Deploy
+            </a>
+            <a
+              href={selectedProject.githubUrl || "#"}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={getLinkClassName(selectedProject.githubUrl)}
+            >
+              GitHub
+            </a>
+          </div>
         </div>
       </div>
     </section>

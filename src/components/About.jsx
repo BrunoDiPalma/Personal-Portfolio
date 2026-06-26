@@ -12,11 +12,15 @@ function About() {
 
       <p className="about-text">
         Estudante de Análise e Desenvolvimento de Sistemas com foco em
-        desenvolvimento web e construção de aplicações full stack. Possuo
-        experiência prática em projetos utilizando JavaScript, TypeScript,
-        React, Node.js e MySQL, incluindo desenvolvimento de APIs REST. Também
-        aplico conceitos como validação com Zod, criptografia com bcrypt e
-        autenticação via JWT.
+        desenvolvimento full stack. Desenvolvo aplicações web utilizando React,
+        TypeScript, Node.js, Prisma e bancos de dados. Também possuo experiência
+        com autenticação JWT, criptografia com bcrypt, APIs REST e versionamento
+        com Git.
+      </p>
+
+      <p>
+        Atualmente busco oportunidades de estágio ou desenvolvimento júnior para
+        continuar evoluindo como desenvolvedor Full Stack.
       </p>
 
       <div className="stacks">

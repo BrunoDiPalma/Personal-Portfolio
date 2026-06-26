@@ -1,6 +1,7 @@
 import linkedinImg from "../assets/linkedin-img.png";
 import whatsappImg from "../assets/whatsapp-img.png";
 import gitImg from "../assets/github-img.png";
+import emailImg from "../assets/e-mail-img.png";
 
 function Footer() {
   return (
@@ -35,6 +36,15 @@ function Footer() {
           >
             <img src={gitImg} alt="GitHub" />
             <span>GitHub</span>
+          </a>
+        </div>
+      </div>
+      <div className="email-container">
+        <div className="email-card">
+          <a href="mailto:brunocamargo2010@live.com">
+            <img src={emailImg} alt="E-mail" />
+            <span>E-mail</span>
+            <p>brunocamargo2010@live.com</p>
           </a>
         </div>
       </div>
