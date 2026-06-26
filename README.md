@@ -51,5 +51,5 @@ https://personal-portfolio-brunopalma.vercel.app/
 
 ## 📫 Contato
 
-[LinkedIn](https://www.linkedin.com/in/bruno-di-palma-camargo/)  
-[GitHub](https://github.com/BrunoDiPalma)
+- [LinkedIn](https://www.linkedin.com/in/bruno-di-palma-camargo/)  
+- [GitHub](https://github.com/BrunoDiPalma)
