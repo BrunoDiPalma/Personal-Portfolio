@@ -25,9 +25,9 @@ https://personal-portfolio-brunopalma.vercel.app/
 
 ## 🛠️ Tecnologias
 
-React
-JavaScript
-CSS3
+- React
+- JavaScript
+- CSS3
 
 ---
 
