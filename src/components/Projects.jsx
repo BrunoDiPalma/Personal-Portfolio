@@ -1,7 +1,7 @@
 import { useState } from "react";
 import userSystemImg from "../assets/user-management-system.png";
 import filmtrackImg from "../assets/filmtrack.png";
-import authSystemImg from "../assets/auth-system.png";
+import authSystemImg from "../assets/auth-system-v2.png";
 
 const projects = [
   {
