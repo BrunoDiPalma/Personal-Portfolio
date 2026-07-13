@@ -11,7 +11,7 @@ function About() {
       <h1>Sobre mim</h1>
 
       <p className="about-text">
-        Estudante de Análise e Desenvolvimento de Sistemas com foco em
+        Estudante de Ciência da Computação com foco em
         desenvolvimento full stack. Desenvolvo aplicações web utilizando React,
         TypeScript, Node.js, Prisma e bancos de dados. Também possuo experiência
         com autenticação JWT, criptografia com bcrypt, APIs REST e versionamento
